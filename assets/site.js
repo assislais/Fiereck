@@ -52,7 +52,7 @@ o.type="sine";o.frequency.setValueAtTime(420,t);o.frequency.exponentialRampToVal
 g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.35,t+.012);g.gain.exponentialRampToValueAtTime(.0001,t+.2);
 o.connect(g);g.connect(C.destination);o.start(t);o.stop(t+.22);
 setTimeout(()=>{if(C.state!=="running")C.close()},150)}catch(e){}}
-setTimeout(()=>{wab.classList.add("show");pop()},3000);
+setTimeout(()=>{wab.classList.add("show");pop()},10000);
 const chat=$("#chat"),chi=$("#chi");
 if(IMAGES.chatAvatar){$("#av").style.backgroundImage="url('"+IMAGES.chatAvatar+"')";$("#av").textContent=""}
 document.querySelectorAll(".tm").forEach(t=>t.textContent=new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"}));
